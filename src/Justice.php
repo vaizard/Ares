@@ -46,7 +46,6 @@ final class Justice
      */
     public function findById($id)
     {
-        Assertion::integer($id);
 
         $crawler = $this->client->request('GET', sprintf(self::URL_SUBJECTS, $id));
         $detailUrl = $this->extractDetailUrlFromCrawler($crawler);
