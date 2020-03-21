@@ -67,6 +67,9 @@ final class Justice
                 } elseif ('Společník: ' === $title) {
                     $person = JusticeSpolecnikPersonParser::parseFromDomCrawler($table);
                     $people[$person->getName()] = $person;
+                } elseif ('Ředitel: ' === $title) {
+                    $person = JusticeSpolecnikPersonParser::parseFromDomCrawler($table);
+                    $people[$person->getName()] = $person;
                 }
             } catch (\Exception $e) {
                 throw $e;
